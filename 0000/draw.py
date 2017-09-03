@@ -7,7 +7,9 @@ from PIL import Image, ImageDraw, ImageFont
 # draw text in picture
 def draw_text(img, text):
     draw = ImageDraw.Draw(img)
-    font = ImageFont.truetype('arial.ttf', 30)
+
+    #this path work for mac
+    font = ImageFont.truetype('/Library/Fonts/Arial.ttf', 30)
     size = draw.textsize(text, font)
     x = img.size[0] - size[0]
     y = 0
